@@ -1,0 +1,16 @@
+{% include 'headerFooter/header.html'%}
+{% for todo in todos %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><a href="/todos/details/{{todo.id}}">{{ todo.title }}</a></h3>
+  </div>
+  <div class="panel-body">
+    {{ todo.text }}
+  </div>
+  <div class="panel-footer">{{ todo.created_at }}</div>
+</div>
+{% endfor %}
+{% include 'headerFooter/footer.html'%}
+
+
+
